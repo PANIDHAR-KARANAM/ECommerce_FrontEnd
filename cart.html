@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--run the code with live server-->
+<html>
+    <head>
+        <title>cart</title>
+        <script src="jscript.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>   
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+        <script>  
+            $(function(){ 
+                $("#header").load("header.html");  
+                $("#footer").load("footer.html");
+            }); 
+        </script>
+        <!--adding the header dynamically-->
+        <div id="header"></div>
+        <!--Body of the page-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 800px;height: 500px;margin-top: 100px;">
+                        <div class="container">
+                            <h3 class="card-title" style="background-color: goldenrod;text-align: center;color: white;">Items in cart</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://static1.funidelia.com/11559-f4_large/superman-returns-muscular-child-costume.jpg" class="card-img-top" style="width: 300px;height: 400px;">
+                                </div>
+                                <div class="col">
+                                    <h4 class="card-text"><b>Superman Dress</b></h4><br><h4><b>$15</b></h4>
+                                </div>
+                                <div class="col">
+                                    <form>
+                                        <input type="number" id="inputbox" style="width: 50px;height: 30px;border-radius: 5px;" value="0" oninput="cart()">
+                                    </form>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 400px;height: 300px;margin-top: 100px;">
+                        <h5 style="background-color: goldenrod;color: white; text-align: center;"><b>Summary</b></h5>
+                        <div class="conatiner">
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col" style="margin-left: 15px;">Cost</div>
+                                <div class="col"><input type="text" readonly id="costbox"></div>
+                            </div><br><br>
+                            <div class="row">
+                                <div class="col" style="margin-left: 15px;">Shipping</div>
+                                <div class="col">$5</div>
+                            </div><hr>
+                            <div class="row">
+                                <div class="col" style="margin-left: 15px;">
+                                    <h5><b>Total</b></h5>
+                                </div>
+                                <div class="col"><input type="text" readonly id="outputbox"></div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col"><button class="btn btn-primary" style="background-color: goldenrod;color: white;margin-left: 150px;border: goldenrod;">Checkout</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <!--Adding header dynamically-->
+        <div id="footer"></div>
+    </body>
+</html>
